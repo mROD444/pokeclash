@@ -1,0 +1,32 @@
+{%extends 'base html'%}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+{% include './includes/nav.html'%}
+    {% if full_roster %}
+    <div class = 'mx-auto mb-8'>
+        {% for pokemon in full_roster %}
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{ main.image}}" class="img-fluid rounded-start" alt="{{name}}">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{name}}</h5>
+                  <p class="card-text">{{ main.name}},{{ main.abiltity}}, {{ main.base_experience}}</p>
+                  {% if current_user.id = post.user_id %}
+                  <a href="#" class = 'btn btn-info'>Edit Roster </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+            {{pokemon}}
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endblock %}

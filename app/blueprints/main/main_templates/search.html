@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+
+{% block styles %}
+    <link rel="stylesheet" href="../static/styles/search.css">
+{%endblock%}
+
+
+{% block title %}
+Search for Any Pokemon
+{% endblock %}
+
+{% block content %}
+    {% include './includes/nav.html'%}
+    <form method="POST">
+        <div class="mb-3">
+          <label for="nameLabel" class="form-label">Search for Pokémon</label>
+          <input type="text" class="form-control" id="nameLabel" name="pokeName">
+        </div>
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/592ec50f-7a98-4675-a8f2-7915168c695f/d6i21i9-add58c58-7741-492e-b20f-9f5d865760d5.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU5MmVjNTBmLTdhOTgtNDY3NS1hOGYyLTc5MTUxNjhjNjk1ZlwvZDZpMjFpOS1hZGQ1OGM1OC03NzQxLTQ5MmUtYjIwZi05ZjVkODY1NzYwZDUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.e1gdqEFrueJyhnNyHenIV6gvx_yavrDT0ZsHtF3fJDg">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      {% if poke_data %}
+      <div class="pokemonDetails">
+        <h1>{{ poke_data['name'].title() }}</h1>
+        <img src="{{ poke_data['image'] }}" alt="{{ poke_data['name'] }}" class="pokemon-image">
+        <ul>
+          <li class="ability">Ability: {{ poke_data ['ability'].title() }}</li>
+          <li class="experience">Base Experience: {{poke_data['base_experience']}}</li>
+        </ul>
+      </div>
+      {% endif %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+{%endblock%}

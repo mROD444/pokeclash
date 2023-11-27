@@ -1,0 +1,60 @@
+body{
+    background-color:#363636;
+    margin-bottom: 20%;
+}
+
+h1{
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Pixelify Sans', sans-serif;
+    text-shadow: -5px -5px 0 #3B4CCA,  
+    5px -5px 0 #3B4CCA,
+   -5px  5px 0 #3B4CCA,
+    5px  -5px 0 #3B4CCA;
+    color:#ffdd00;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    margin-top: 90px;
+    font-size: 80px;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    width: 75%;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 2%;
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+    margin-left: 13%;
+    margin-bottom: 7%;
+}
+
+.giphy-embed{
+    border-radius: 100px;
+    margin-left: 38%;
+    margin-top: 60px;
+}
+
+h5{
+    font-family: 'Sulphur Point', sans-serif;
+    font-size: 50px;
+    color: white;
+    font-style: italic;
+    text-align: center;
+    
+}
+
+p{
+    font-family: 'Sulphur Point', sans-serif;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 25px;
+    width: 70%;
+    margin-left: 15%;
+
+}
+
